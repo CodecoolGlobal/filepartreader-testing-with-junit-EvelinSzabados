@@ -14,7 +14,10 @@ public class FileWordAnalyzer {
         String words = reader.readLines();
         List<Character> characterList = new ArrayList<Character>();
         for (int i = 0; i < words.length(); i++) {
-            characterList.add(Character.toLowerCase(words.charAt(i)));
+            if(!Character.toString(words.charAt(i)).equals(".")){
+                characterList.add(Character.toLowerCase(words.charAt(i)));
+            }
+
 
         }
         Collections.sort(characterList);
