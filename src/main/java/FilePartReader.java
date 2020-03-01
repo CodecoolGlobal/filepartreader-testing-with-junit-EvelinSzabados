@@ -38,10 +38,10 @@ public class FilePartReader {
     }
     public String readLines (){
         String fileContent = read();
-        String[] lines = fileContent.split(".");
+        String[] lines = fileContent.split("\\.");
         StringBuilder resultLines = new StringBuilder();
-        for(int i = fromLine-1; i<toLine-1; i++){
-            resultLines.append(lines[i]);
+        for(int i = fromLine-1; i<toLine; i++){
+            resultLines.append(lines[i]+".");
         }
 
         return resultLines.toString();
